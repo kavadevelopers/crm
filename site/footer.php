@@ -15,9 +15,9 @@
 	});
 </script>
 
-<?php $indiaaa = $con->query("SELECT * FROM `india` WHERE `c_id` = '".$user->c_id."'")->fetch_object(); 
- if(DateDiffInterval($indiaaa->last_date.' '.$indiaaa->last_time,date('Y-m-d H:i:s'),'M') > 20){ ?>
-<script>
+<?php //$indiaaa = $con->query("SELECT * FROM `india` WHERE `c_id` = '".$user->c_id."'")->fetch_object(); 
+ //if(DateDiffInterval($indiaaa->last_date.' '.$indiaaa->last_time,date('Y-m-d H:i:s'),'M') > 20){ ?>
+<!-- <script>
 $(document).ready(function() {
     $.ajax({
         type: 'POST',
@@ -27,10 +27,10 @@ $(document).ready(function() {
         }
     });
 });
-</script>
-<?php } ?>
+</script> -->
+<?php //} ?>
 
-<script>
+<!-- <script>
 $(document).ready(back_ground());
 function back_ground() {
     $.ajax({
@@ -41,7 +41,7 @@ function back_ground() {
         }
     });
 }
-</script>
+</script> -->
 <script type="text/javascript" src="plugins/jQuery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jQueryUI/jquery-ui.min.js"></script>

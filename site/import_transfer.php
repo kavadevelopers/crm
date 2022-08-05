@@ -125,8 +125,11 @@
 			             		<button type="submit" class="btn btn-primary">Transfer</button>
 			             	
 			             	</div>
-							<div class="col-md-3 pull-right">
-								<button type="button" class="btn btn-danger pull-right" id="delete_button">Delete</button>
+							<div class="col-md-6 text-right">
+								<button type="button" class="btn btn-success" id="refresh-btn">
+									<i class="fa fa-refresh"></i>
+								</button>
+								<button type="button" class="btn btn-danger" id="delete_button">Delete</button>
 							</div>
 			            </div>
 
@@ -159,6 +162,18 @@ function searchFilter() {
 }
 
 $(function(){
+	$('#refresh-btn').click(function(){
+		$(".loader").fadeIn();
+		$.ajax({
+			type: 'POST',
+			url: 'import_indiamart.php',
+			data:{},
+			success: function (html) {
+				location.reload(true);
+			}
+		});
+	});
+		
 	$('#delete_button').click(function(){
 	  	if(confirm('Are you sure you want to Delete Checked Leads ?')){
 			var checkedVals = $('.delete_checkbox:checkbox:checked').map(function() {
