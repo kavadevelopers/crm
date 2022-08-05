@@ -10,8 +10,8 @@
 				                	<th>View</th>
 				                	<th>Lead Id</th>
 				                  	<th>Due Date</th>
-				                  	<th>Contact Name</th>
 				                  	<th>Company Name</th>
+				                  	<th>Address</th>
 				                  	<th>Status</th>
 				                  	<th>Action</th>
 				                </tr>
@@ -37,8 +37,8 @@
 
 					                  <td><?php echo date("d/m/Y", strtotime($followr->contact_date)); ?></td>
 
-					                  <td><?php if(!empty($com_detail->c_person)) {echo strip_tags($com_detail->c_person,'<br>'); }else{ echo ' - '; } ?></td>
 					                   <td><?php echo strip_tags($com_detail->name,'<br>'); ?></td>	
+					                   <td><?= $com_detail->city ?>,<?= $com_detail->state ?><br><?= $com_detail->address ?></td>	
 					                  <td><?php echo status_lead($followr->close); ?></td>	
 					                  <td>
 										<!--<a href="process/delete_india.php?id=<?php echo $followr->id; ?>&f_id=<?php echo $_POST['type']; ?>" class="btn btn-danger btn-sm" title="Delete" style="font-size: 15px;" onclick="return confirm('Are you sure you want to Delete this Lead ?');"><i class="fa fa-times"></i></a>-->
