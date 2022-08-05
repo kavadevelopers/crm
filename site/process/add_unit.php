@@ -16,7 +16,7 @@ if( isset($_POST['submit']) )
 		'".$con->real_escape_string(trim($_POST['DL']))."',
 		'".$con->real_escape_string(trim($_POST['Statec']))."',
 		'".$con->real_escape_string(trim($_POST['State']))."',
-		 ".$con->real_escape_string(trim($_POST['c_ip_new']))."'
+		 '".$con->real_escape_string(trim($_POST['c_ip_new']))."'
 	)");
 
 	$id = $con->insert_id;
