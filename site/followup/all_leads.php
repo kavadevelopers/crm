@@ -63,7 +63,7 @@
 													<td><?php echo strip_tags($company->name,'<br>'); ?></td>
 													<td style="width:50px;"><?php echo date("d/m/Y", strtotime($row->contact_date)); ?></td>
 													
-													<td><?= $row->address ?></td>
+													<td><?= $company->address ?></td>
 													<td><?php echo get_status($con,$row->status); ?></td>
 													<td style="display: none;"><?php echo $company->email; ?></td>
 													<td style="display: none;"><?php echo $company->mobile; ?></td>
