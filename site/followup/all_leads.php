@@ -34,7 +34,7 @@
 													  <th>Date</th>
 													  <th>Company</th>
 													  <th>Follow Up Date</th>
-														<th >Source</th>
+														<th >Address</th>
 													  <th >Status</th>
 													  <th style="display: none;">Email</th>
 													  <th style="display: none;">Mobile</th>
@@ -63,7 +63,7 @@
 													<td><?php echo strip_tags($company->name,'<br>'); ?></td>
 													<td style="width:50px;"><?php echo date("d/m/Y", strtotime($row->contact_date)); ?></td>
 													
-													<td><?php echo get_source($con,$row->source); ?></td>
+													<td><?= $row->address ?></td>
 													<td><?php echo get_status($con,$row->status); ?></td>
 													<td style="display: none;"><?php echo $company->email; ?></td>
 													<td style="display: none;"><?php echo $company->mobile; ?></td>
