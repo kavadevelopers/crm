@@ -1,8 +1,4 @@
-							<?php
-								include_once("../config/config.php");
-								include_once("../function/other.php");
-								include_once("../query.php");
-								?>
+<?php include_once("../config/config.php"); include_once("../function/other.php"); include_once("query.php"); ?>
 							<table id="followup" class="table table-hover table-striped">
 			              	<thead>
 				                <tr>
