@@ -1,7 +1,6 @@
 							<form action="process/delete_all_lead.php" method="post">
 								<?php
 								include_once("../config/config.php");
-								include_once("../function/other.php");
 								include_once("../query.php");
 								?>
 								<?php if($_POST['type'] == 3 && $user->auth != 2){ ?><button class="btn btn-danger btn-xs pull-right" onclick="return confirm('Are you sure you want to Delete Checked Leads ?');">Delete Checked</button><?php } ?>
