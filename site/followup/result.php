@@ -24,7 +24,7 @@
 				                  	<th>Country</th>
 				                  	<th>State</th>
 				                  	<th>City</th>
-				                  	<th>Status</th>
+				                  	<th>Address</th>
 				                  	
 				                  	
 				                  	<?php if($user->auth == 1){ ?>
@@ -80,7 +80,7 @@
 					                  <td><?php echo date("d/m/Y", strtotime($followr->contact_date)); ?></td>
 					                  <td><?php if(!empty($com_detail->c_person)) {echo strip_tags($com_detail->c_person,'<br>'); }else{ echo ' - '; } ?></td>
 					                  <td><?php echo strip_tags($com_detail->name,'<br>'); ?></td>	
-					                  <td><?php echo get_source($con,$followr->source); ?></td>
+					                  <td><?= $com_detail->address ?></td>
 					                  <td><?php echo $country->country_name; ?></td>	
 					                  <td><?php echo strip_tags($com_detail->state,'<br>'); ?></td>	
 					                  <td><?php echo strip_tags($com_detail->city,'<br>'); ?></td>	
